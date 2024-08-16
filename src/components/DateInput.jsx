@@ -101,7 +101,7 @@ const DateInput = ({
               onClick={() => deleteEl(item.id)}
               sx={{ ml: 2 }}
             >
-              <DeleteOutlineOutlinedIcon color="secondary" />
+              <DeleteOutlineOutlinedIcon color="primary" />
             </IconButton>
           </Tooltip>
           <Tooltip title="Duplicate Element" aria-label="duplicate-element">
@@ -110,7 +110,7 @@ const DateInput = ({
               onClick={() => duplicateElement(item.id, item.type)}
               sx={{ ml: 2 }}
             >
-              <FileCopyIcon color="secondary" />
+              <FileCopyIcon color="primary" />
             </IconButton>
           </Tooltip>
 
@@ -120,7 +120,7 @@ const DateInput = ({
                 checked={item.required}
                 onChange={() => handleRequired(item.id)}
                 name="required-field"
-                color="secondary"
+                color="primary"
               />
             }
             label="Required"

@@ -1,8 +1,6 @@
-import {
-  Delete,
-  DragIndicator,
-  InsertCommentOutlined,
-} from "@mui/icons-material";
+import DragIndicatorIcon from "@mui/icons-material/DragIndicator";
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
+import FileCopyIcon from "@mui/icons-material/FileCopy";
 import {
   Box,
   Divider,
@@ -34,7 +32,7 @@ const TextInput = ({
     <Fragment>
       <Paper elevation={1}>
         <Box sx={{ textAlign: "center" }}>
-          <DragIndicator
+          <DragIndicatorIcon
             sx={{ transform: "rotate(-90deg)", cursor: "all-scroll" }}
           />
         </Box>
@@ -86,7 +84,7 @@ const TextInput = ({
               onClick={() => deleteEl(item.id)}
               sx={{ ml: 2 }}
             >
-              <Delete color="secondary" />
+              <DeleteOutlineOutlinedIcon color="primary" />
             </IconButton>
           </Tooltip>
           <Tooltip title="Duplicate Element" aria-label="duplicate-element">
@@ -95,7 +93,7 @@ const TextInput = ({
               onClick={() => duplicateElement(item.id, item.type)}
               sx={{ ml: 2 }}
             >
-              <InsertCommentOutlined color="secondary" />
+              <FileCopyIcon color="primary" />
             </IconButton>
           </Tooltip>
 
@@ -105,7 +103,7 @@ const TextInput = ({
                 checked={item.required}
                 onChange={() => handleRequired(item.id)}
                 name="required-field"
-                color="secondary"
+                color="primary"
               />
             }
             label="Required"
