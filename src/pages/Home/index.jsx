@@ -96,6 +96,11 @@ const Index = () => {
     });
     setData(newArr);
   };
+  const handleFile = (id, file) => {
+    setFormData((prevData) =>
+      prevData.map((item) => (item.id === id ? { ...item, file: file } : item))
+    );
+  };
 
   //Function to Handle Options
   const addOption = (id, newOption) => {
@@ -249,6 +254,7 @@ const Index = () => {
             handleElType={handleElType}
             handleTime={handleTime}
             duplicateElement={duplicateElement}
+            handleFile={handleFile}
           />
         );
       default:
