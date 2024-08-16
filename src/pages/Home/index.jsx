@@ -1,19 +1,19 @@
-import React from "react";
-import { Button, Inputs, Modal, ToolTip } from "../../components";
+import React, { useState } from "react";
 import { Header, Footer, Navbar } from "../../layout";
 
-const index = () => {
+const Index = () => {
+  const [title, setTitle] = useState("Untitled Form");
+  const [description, setDescription] = useState("");
   return (
-    <div>
-      <Header />
-      Home Pag
-      <br />
-      {/* <Button/>
-      <Inputs/>
-      <Modal/>
-      <ToolTip/> */}
+    <div className="bg-white text-gray-900 font-sans p-5 rounded-lg">
+      <Header
+        title={title}
+        setTitle={setTitle}
+        description={description}
+        setDescription={setDescription}
+      />{" "}
     </div>
   );
 };
 
-export default index;
+export default Index;
