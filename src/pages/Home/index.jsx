@@ -10,6 +10,11 @@ import AddCircleOutlineOutlinedIcon, {
 import uuid from "react-uuid";
 import { formElements } from "../../utils/const";
 import TextArea from "../../components/TextArea";
+import RadioInput from "../../components/RadioInput";
+import DateInput from "../../components/DateInput";
+import NumberInput from "../../components/NumInput";
+import TimeInput from "../../components/TimeInput";
+import FileInput from "../../components/FileInput";
 const Index = () => {
   const initVal = formElements[0]?.value;
 
@@ -182,6 +187,67 @@ const Index = () => {
             deleteEl={deleteEl}
             handleRequired={handleRequired}
             handleElType={handleElType}
+            duplicateElement={duplicateElement}
+          />
+        );
+      case "number":
+        return (
+          <NumberInput
+            item={item}
+            handleValue={handleValue}
+            deleteEl={deleteEl}
+            handleRequired={handleRequired}
+            handleElType={handleElType}
+            duplicateElement={duplicateElement}
+          />
+        );
+      case "radio":
+        return (
+          <RadioInput
+            item={item}
+            handleValue={handleValue}
+            deleteEl={deleteEl}
+            handleRequired={handleRequired}
+            handleElType={handleElType}
+            addOption={addOption}
+            handleOptionValues={handleOptionValues}
+            deleteOption={deleteOption}
+            duplicateElement={duplicateElement}
+          />
+        );
+      case "date":
+        return (
+          <DateInput
+            item={item}
+            handleValue={handleValue}
+            deleteEl={deleteEl}
+            handleRequired={handleRequired}
+            handleElType={handleElType}
+            handleDate={handleDate}
+            duplicateElement={duplicateElement}
+          />
+        );
+      case "time":
+        return (
+          <TimeInput
+            item={item}
+            handleValue={handleValue}
+            deleteEl={deleteEl}
+            handleRequired={handleRequired}
+            handleElType={handleElType}
+            handleTime={handleTime}
+            duplicateElement={duplicateElement}
+          />
+        );
+      case "file":
+        return (
+          <FileInput
+            item={item}
+            handleValue={handleValue}
+            deleteEl={deleteEl}
+            handleRequired={handleRequired}
+            handleElType={handleElType}
+            handleTime={handleTime}
             duplicateElement={duplicateElement}
           />
         );

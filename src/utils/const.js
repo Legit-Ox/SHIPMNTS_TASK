@@ -23,4 +23,8 @@ export const formElements = [
     label: "Time",
     value: "time",
   },
+  {
+    label: "File",
+    value: "file",
+  },
 ];
