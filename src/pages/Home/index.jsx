@@ -9,6 +9,7 @@ import AddCircleOutlineOutlinedIcon, {
 } from "@mui/icons-material";
 import uuid from "react-uuid";
 import { formElements } from "../../utils/const";
+import TextArea from "../../components/TextArea";
 const Index = () => {
   const initVal = formElements[0]?.value;
 
@@ -165,6 +166,17 @@ const Index = () => {
       case "text":
         return (
           <TextInput
+            item={item}
+            handleValue={handleValue}
+            deleteEl={deleteEl}
+            handleRequired={handleRequired}
+            handleElType={handleElType}
+            duplicateElement={duplicateElement}
+          />
+        );
+      case "textarea":
+        return (
+          <TextArea
             item={item}
             handleValue={handleValue}
             deleteEl={deleteEl}

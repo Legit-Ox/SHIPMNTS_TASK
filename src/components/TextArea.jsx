@@ -1,28 +1,28 @@
-import {
-  Delete,
-  DragIndicator,
-  InsertCommentOutlined,
-} from "@mui/icons-material";
-import {
-  Box,
-  Divider,
-  FormControl,
-  FormControlLabel,
-  FormGroup,
-  Grid,
-  IconButton,
-  InputLabel,
-  MenuItem,
-  Paper,
-  Select,
-  Switch,
-  TextField,
-  Tooltip,
-} from "@mui/material";
 import { Fragment } from "react";
+// MUI Components
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Switch from "@mui/material/Switch";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import Grid from "@mui/material/Grid";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+// Icons
+import DragIndicatorIcon from "@mui/icons-material/DragIndicator";
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
+import FileCopyIcon from "@mui/icons-material/FileCopy";
+
+// Form Elements
 import { formElements } from "../utils/const";
 
-const TextInput = ({
+const TextArea = ({
   item,
   handleValue,
   deleteEl,
@@ -34,7 +34,7 @@ const TextInput = ({
     <Fragment>
       <Paper elevation={1}>
         <Box sx={{ textAlign: "center" }}>
-          <DragIndicator
+          <DragIndicatorIcon
             sx={{ transform: "rotate(-90deg)", cursor: "all-scroll" }}
           />
         </Box>
@@ -42,19 +42,21 @@ const TextInput = ({
           <Grid container spacing={1}>
             <Grid item xs={9}>
               <TextField
-                value={item.value}
+                defaultValue={item.value}
                 variant="outlined"
-                onChange={(e) => handleValue(item.id, e)}
+                onBlur={(e) => handleValue(item.id, e)}
                 fullWidth
                 required={item.required}
-                placeholder="Textfield Label"
+                placeholder="Textarea Label"
                 sx={{ mb: 2 }}
               />
               <TextField
                 variant="outlined"
                 fullWidth
-                placeholder="Textfield Input Field"
+                placeholder="TextareaIInput Field"
                 disabled
+                multiline
+                rows={3}
               />
             </Grid>
             <Grid item xs={3}>
@@ -78,7 +80,7 @@ const TextInput = ({
             </Grid>
           </Grid>
         </Box>
-        <Divider />
+        <Divider light />
         <FormGroup row sx={{ alignItems: "center" }}>
           <Tooltip title="Delete Element" aria-label="delete-element">
             <IconButton
@@ -86,7 +88,7 @@ const TextInput = ({
               onClick={() => deleteEl(item.id)}
               sx={{ ml: 2 }}
             >
-              <Delete color="secondary" />
+              <DeleteOutlineOutlinedIcon color="secondary" />
             </IconButton>
           </Tooltip>
           <Tooltip title="Duplicate Element" aria-label="duplicate-element">
@@ -95,7 +97,7 @@ const TextInput = ({
               onClick={() => duplicateElement(item.id, item.type)}
               sx={{ ml: 2 }}
             >
-              <InsertCommentOutlined color="secondary" />
+              <FileCopyIcon color="secondary" />
             </IconButton>
           </Tooltip>
 
@@ -116,4 +118,5 @@ const TextInput = ({
     </Fragment>
   );
 };
-export default TextInput;
+
+export default TextArea;
