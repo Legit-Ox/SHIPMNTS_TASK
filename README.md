@@ -58,5 +58,28 @@ This will start the development server and open your new React application in th
 ### File
 ![image](https://github.com/user-attachments/assets/9cc3166d-1fc5-478a-9969-a72b11fbdb83)
 
+# Project Tasks
+
+## Form Creation Interface
+
+### Title and Description
+- [x] Provide input fields for the form's title and description.
+
+### Form Elements
+- [x] Users should be able to add various types of form elements, including:
+  - [x] Text Input: Short answer (single line) and long answer (paragraph).
+  - [x] Multiple Choice: Options with radio buttons.
+  - [ ] Checkboxes: Multiple options that can be selected.
+  - [ ] Dropdown: A dropdown list with multiple options.
+  - [x] Date Picker: Allows users to select a date.
+  - [x] File Upload: Users can upload files.
+
+### Reordering
+- [x] Implement drag-and-drop functionality to reorder the form elements.
+
+### Customization
+- [x] Allow users to edit, duplicate, or delete form elements.
+- [ ] Support adding descriptions or hints for each question.
+- [x] Enable required fields (user cannot submit the form without filling this out).
 
 
