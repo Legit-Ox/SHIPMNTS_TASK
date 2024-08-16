@@ -34,3 +34,13 @@ This will start the development server and open your new React application in th
 
 ### Screenshots
 
+### Title
+![image](https://github.com/user-attachments/assets/ee201542-9f1c-442a-8658-9d85477a8443)
+
+### Input Field
+![image](https://github.com/user-attachments/assets/ebb7492f-e5ed-4cb9-a20a-02ee1b86a5bc)
+
+### Types of Input
+![image](https://github.com/user-attachments/assets/7f621619-34c7-4409-9dce-a391d3b46e98)
+
+
