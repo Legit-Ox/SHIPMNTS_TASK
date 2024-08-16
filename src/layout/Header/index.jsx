@@ -4,7 +4,11 @@ import Paper from "@mui/material/Paper";
 
 const Header = ({ title, description, setTitle, setDescription }) => {
   return (
-    <Paper elevation={2} sx={{ p: 3, borderTop: "8px solid #9C27B0" }}>
+    <Paper
+      elevation={2}
+      // sx={{ p: 3, borderTop: "8px solid #9C27B0" }}
+      className="border-8 border-t-violet-700 p-3"
+    >
       <TextField
         defaultValue={title}
         onBlur={(e) => setTitle(e.target.value)}
@@ -12,6 +16,7 @@ const Header = ({ title, description, setTitle, setDescription }) => {
         placeholder="Form Title"
         name="title"
         sx={{ mb: 3 }}
+        className="mb-3"
         fullWidth
       />
       <TextField
